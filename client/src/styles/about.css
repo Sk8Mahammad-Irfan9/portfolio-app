@@ -1,0 +1,79 @@
+.about-bg {
+    background-color: #090b10;
+    padding: 40px;
+    color: #fff;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #301b56;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-me-section {
+    margin-bottom: 20px;
+}
+
+.about-main-content .about-heading {
+    color: #bb1b37;
+    margin-bottom: 15px;
+}
+
+.about-details-section .about-details-paragraph {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-skills-section .skills-heading {
+    color: #bb1b37;
+    margin-bottom: 15px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skill-item {
+    background-color: #b29b68;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.skill-item:hover {
+    background-color: #f4951b;
+}
+
+.resume-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-heading {
+    color: #f4951b;
+    margin-bottom: 10px;
+}
+
+.resume-link {
+    color: #bb1b37;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #68b30c;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-link:hover {
+    background-color: #ffc47d;
+}

@@ -1,0 +1,64 @@
+.contact-me {
+    background-color: #090b10;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-me__title {
+    color: #bb1b37;
+    text-align: center;
+}
+
+.contact-me__success-message {
+    color: #68b30c;
+    text-align: center;
+}
+
+.contact-me__error-message {
+    color: #f8046a;
+    text-align: center;
+}
+
+.contact-me__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-me__form-group {
+    margin-bottom: 15px;
+}
+
+.contact-me__label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-me__input,
+.contact-me__textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contact-me__textarea {
+    min-height: 100px;
+}
+
+.contact-me__button {
+    padding: 10px;
+    background-color: #bb1b37;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-me__button:hover {
+    background-color: #b29b68;
+}

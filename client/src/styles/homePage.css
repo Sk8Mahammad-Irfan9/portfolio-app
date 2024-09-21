@@ -1,0 +1,105 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+    background-color: #090b10;
+    color: #ffffff;
+}
+
+h1,
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid #bb1b37;
+    max-width: 100%;
+    border-radius: 15px;
+    background-color: #301b56;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(62deg, #301b56 0%, #090b10 100%);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.info {
+    max-width: 90%;
+    margin: 2rem auto;
+    color: #f4951b;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.info:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .about {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .welcome-section {
+        padding: 2rem;
+    }
+
+    .info {
+        max-width: 80%;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    .about {
+        max-width: 71rem;
+        border-radius: 25px;
+    }
+
+    .info {
+        max-width: 80rem;
+    }
+}

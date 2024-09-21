@@ -1,3 +1,22 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all crawlers to access the entire site
 User-agent: *
 Disallow:
+
+# Disallow access to sensitive directories
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /tmp/
+
+# Block indexing of specific file types
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.xls$
+
+# Allow Googlebot to crawl CSS and JS for better rendering
+User-agent: Googlebot
+Allow: /*.css
+Allow: /*.js
+
+# Sitemap location
+Sitemap: https://sk-mahammad-irfan.vercel.app/sitemap.xml

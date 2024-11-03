@@ -4,12 +4,9 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const rateLimit = require("express-rate-limit");
 const dns = require("dns");
-
 const {
   RecaptchaEnterpriseServiceClient,
 } = require("@google-cloud/recaptcha-enterprise");
-const { resolve } = require("path");
-const { error } = require("console");
 
 const app = express();
 const PORT = process.env.PORT || 5000;

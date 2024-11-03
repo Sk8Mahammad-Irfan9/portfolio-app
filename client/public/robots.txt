@@ -19,4 +19,4 @@ Allow: /*.css
 Allow: /*.js
 
 # Sitemap location
-Sitemap: https://sk-mahammad-irfan.vercel.app/sitemap.xml
+Sitemap: https://sk-mahammad-irfan.vercel.app/

@@ -66,7 +66,7 @@ app.post("/send-email", async (req, res) => {
   });
 
   const mailOptions = {
-    from: process.env.NODEMAILER_GMAIL,
+    from: email,
     to: process.env.NODEMAILER_GMAIL,
     subject: subject,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,

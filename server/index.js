@@ -4,9 +4,6 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const rateLimit = require("express-rate-limit");
 const dns = require("dns");
-const {
-  RecaptchaEnterpriseServiceClient,
-} = require("@google-cloud/recaptcha-enterprise");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -41,7 +38,7 @@ const checkDomain = (domain) => {
 };
 
 app.post("/send-email", async (req, res) => {
-  const { name, email, subject, message, token, honey } = req.body;
+  const { name, email, subject, message, honey } = req.body;
 
   // Check for honeypot
   if (honey) {
@@ -57,55 +54,6 @@ app.post("/send-email", async (req, res) => {
     await checkDomain(domain);
   } catch (error) {
     return res.status(400).send("Email domain is not valid");
-  }
-
-  async function createAssessment({
-    projectID = `${process.env.PROJECT_ID}`,
-    recaptchaKey = `${process.env.RECAPTCHA_KEY_SECRET}`,
-    token = "action-token",
-    recaptchaAction = "action-name",
-  }) {
-    // Create the reCAPTCHA client.
-    const client = new RecaptchaEnterpriseServiceClient();
-    const projectPath = client.projectPath(projectID);
-
-    // Build the assessment request.
-    const request = {
-      assessment: {
-        event: {
-          token: token,
-          siteKey: recaptchaKey,
-        },
-      },
-      parent: projectPath,
-    };
-
-    const [response] = await client.createAssessment(request);
-
-    // Check if the token is valid.
-    if (!response.tokenProperties.valid) {
-      console.log(
-        The`CreateAssessment call failed because the token was: ${response.tokenProperties.invalidReason}`
-      );
-      return null;
-    }
-
-    // Check if the expected action was executed.
-    // The action property is set by user client in the grecaptcha.enterprise.execute() method.
-    if (response.tokenProperties.action === recaptchaAction) {
-      // Get the risk score and the reason(s).
-      console.log(`The reCAPTCHA score is: ${response.riskAnalysis.score}`);
-      response.riskAnalysis.reasons.forEach((reason) => {
-        console.log(reason);
-      });
-
-      return response.riskAnalysis.score;
-    } else {
-      console.log(
-        "The action attribute in your reCAPTCHA tag does not match the action you are expecting to score"
-      );
-      return null;
-    }
   }
 
   // Create a transporter object
@@ -134,7 +82,7 @@ app.post("/send-email", async (req, res) => {
 });
 
 app.use("/", (req, res) => {
-  res.send("HEllo");
+  res.json("Hello");
 });
 
 app.listen(PORT, () => {

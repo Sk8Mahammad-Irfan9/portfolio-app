@@ -1,5 +1,5 @@
 // src/ContactMe.js
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "../styles/contactme.css";
 import toast from "react-hot-toast";
@@ -15,23 +15,6 @@ const ContactMe = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    const loadReCAPTCHA = () => {
-      const script = document.createElement("script");
-      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_SECRET_CAPTCHA_KEY}`;
-      script.async = true;
-      script.onload = () => {
-        if (window.grecaptcha) {
-          console.log("reCAPTCHA loaded successfully");
-        } else {
-          console.error("reCAPTCHA not loaded");
-        }
-      };
-      document.body.appendChild(script);
-    };
-    loadReCAPTCHA();
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -59,20 +42,9 @@ const ContactMe = () => {
     setError("");
 
     try {
-      if (!window.grecaptcha) {
-        setError("reCAPTCHA not loaded. Please try again later.");
-        return;
-      }
-
-      const token = await window.grecaptcha.enterprise.execute(
-        process.env.REACT_APP_SECRET_CAPTCHA_KEY,
-        { action: "submit" }
-      );
-
       await toast.promise(
         axios.post(`${process.env.REACT_APP_API}/send-email`, {
           ...formData,
-          token,
         }),
         {
           loading: "Sending...",
@@ -171,6 +143,7 @@ const ContactMe = () => {
             className="contact-me__textarea"
           ></textarea>
         </div>
+
         <input type="text" name="honey" style={{ display: "none" }} />
         <button type="submit" className="contact-me__button">
           Send Message

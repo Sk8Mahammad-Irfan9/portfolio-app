@@ -13,7 +13,13 @@ const Projects = () => {
       <div className="project-img">
         <ul>
           <li>
-            <img src={img1} alt="img" loading="lazy" />
+            <a
+              href="https://ecommerce-app-green-mu.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={img1} alt="img" loading="lazy" />
+            </a>
             <div className="project-details">
               <h3>E Commerce</h3>
               <p>
@@ -41,7 +47,13 @@ const Projects = () => {
             </div>
           </li>
           <li>
-            <img src={img3} alt="img" loading="lazy" />
+            <a
+              href="https://gym-frontend-97jv.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={img3} alt="img" loading="lazy" />
+            </a>
             <div className="project-details">
               <h3>Gym website</h3>
               <p>
@@ -67,7 +79,13 @@ const Projects = () => {
             </div>
           </li>
           <li>
-            <img src={img2} alt="img" loading="lazy" />
+            <a
+              href="https://food-app-two-gamma.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={img2} alt="img" loading="lazy" />
+            </a>
             <div className="project-details">
               <h3>Ristora</h3>
               <p>
@@ -96,7 +114,13 @@ const Projects = () => {
           </li>
 
           <li>
-            <img src={img4} alt="img" loading="lazy" />
+            <a
+              href="https://travel-with-us-e1xl.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={img4} alt="img" loading="lazy" />
+            </a>
 
             <div className="project-details">
               <h3>Travel Site</h3>
@@ -124,7 +148,13 @@ const Projects = () => {
             </div>
           </li>
           <li>
-            <img src={img5} alt="img" loading="lazy" />
+            <a
+              href="https://blog-app-ui-delta.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={img5} alt="img" loading="lazy" />
+            </a>
 
             <div className="project-details">
               <h3>Blog App</h3>

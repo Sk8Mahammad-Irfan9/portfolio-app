@@ -37,7 +37,9 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <p>© {new Date().getFullYear()} Sk Mahammad Irfan. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Sk Mahammad Irfan. All rights reserved.
+        </p>
       </footer>
     </>
   );

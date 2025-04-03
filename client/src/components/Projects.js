@@ -14,7 +14,7 @@ const Projects = () => {
         <ul>
           <li>
             <a
-              href="https://ecommerce-app-green-mu.vercel.app/"
+              href="https://ecommerce-app-sand-chi.vercel.app/"
               target="_blank"
               rel="noreferrer"
             >
@@ -37,7 +37,7 @@ const Projects = () => {
               </div>
               <div className="go-live">
                 <a
-                  href="https://ecommerce-app-green-mu.vercel.app/"
+                  href="https://ecommerce-app-sand-chi.vercel.app/"
                   target="_blank"
                   rel="noreferrer"
                 >
